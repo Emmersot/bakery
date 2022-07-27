@@ -1,11 +1,18 @@
 using System;
+using System.Collections.Generic;
+using Bakery.Models;
 
-namespace ProjectName {
+
+namespace Bakery
+{
   public class Program
   {
-    public static void Main()
+    static int Pastry { get; set; }
+    static int Bread { get; set; }
+
+    static void Main();
     {
-      Console.WriteLine(ClassName.Method("Behavior"));
+      
     }
   }
 }
