@@ -1,34 +1,45 @@
 using System;
-using System.Collections.Generic;
 
 namespace Bakery.Models
 {
   public class Bread
   {
+    private static int _Price = 5;
+    private int _Discount = 5;
     public int Amount { get; set; }
-    public int Price { get; set; }
+
+    public int Price
+    {
+      get { return _Price; }
+      set { _Price = value; }
+    }
 
     public Bread(int amount)
     {
+      _Price = Price;
+      _Discount = 5;
       Amount = amount;
     }
 
-    public void BreadCalc()
+    public int BreadCalc()
     {
-      //while incrementing buy 1 if the index is divisible by 3 it wont add to Price
-      for (int i = 1; i <= Amount; i++)
+      int breadTotal = 0;
+      for (int index = 0; index <= Amount; index++)
       {
-        if (i % 3 == 0)
+        if (index == 0)
         {
-          Price += 0;
+          breadTotal += 0;
+        }
+        else if (index % 3 == 0)
+        {
+          breadTotal += 0;
         }
         else
         {
-          {
-            Price += 5;
-          }
+          breadTotal += _Price;
         }
       }
+      return breadTotal;
     }
   }
 }
