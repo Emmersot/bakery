@@ -19,5 +19,27 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(breadCost, breadOrder.BreadCalc());
     }
+    [TestMethod]
+    public void BreadCalc_CostTwoLoafNoDiscount_Int()
+    {
+      //Arrange
+      int breadAmount = 2;
+      double breadCost = 10;
+      //Act
+      Bread breadOrder = new Bread(breadAmount);
+      //Assert
+      Assert.AreEqual(breadCost, breadOrder.BreadCalc());
+    }
+    [TestMethod]
+    public void BreadCalc_CostThirdLoafIsDiscounted_Int()
+    {
+      //Arrange
+      int breadAmount = 3;
+      double breadCost = 10;
+      //Act
+      Bread breadOrder = new Bread(breadAmount);
+      //Assert
+      Assert.AreEqual(breadCost, breadOrder.BreadCalc());
+    }
   }
 }
