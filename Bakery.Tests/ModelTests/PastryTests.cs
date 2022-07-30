@@ -30,5 +30,16 @@ namespace Bakery.Tests
       //Assert
       Assert.AreEqual(pastryCost, pastryOrder.PastryCalc());
     }
+    [TestMethod]
+    public void PastryCalc_CostThreePastriesIsDiscounted_Int()
+    {
+      //Arrange
+      int pastryAmount = 3;
+      double pastryCost = 5;
+      //Act
+      Pastry pastryOrder = new Pastry(pastryAmount);
+      //Assert
+      Assert.AreEqual(pastryCost, pastryOrder.PastryCalc());
+    }
   }
 }
